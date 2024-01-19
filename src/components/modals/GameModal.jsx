@@ -294,7 +294,7 @@ const GameModal = ({show, onHide, title, selectedId, setSelectedId = 0, callback
                         <Button variant={"outline-primary"} size={"sm"} onClick={handleShow}>
                             Добавить ключ
                         </Button>
-                        {values.codeGames.map(code =>
+                        {values.codeGames && values.codeGames.map(code =>
                             <Row className={"mt-2"} key={code.code}>
                                 <Col md={4}>
                                     <Form.Control

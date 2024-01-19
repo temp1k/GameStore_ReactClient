@@ -36,7 +36,7 @@ const Auth = observer(() => {
             temp.numberPhone = (/^(?:\+7|8)\d{10}$/).test(fieldValues.numberPhone) || fieldValues.numberPhone === "" ? "" : "Введите корректный номер телефона"
         }
         if ('password' in fieldValues) {
-            temp.password = PASSWORD_REGEXP.test(fieldValues.password) ? "" : "Пароль должен быть не меньше 8 символов, содержать хотябы одну заглавную и одну прописные буквы, должен иметь спец. символы";
+            temp.password = PASSWORD_REGEXP.test(fieldValues.password) ? "" : "Пароль должен быть не меньше 8 символов, содержать хотя бы одну заглавную и одну прописные буквы, должен иметь спец. символы";
         }
         if ('password' && 'repeatPassword' in fieldValues && !isLogin) {
             temp.password = fieldValues.password === fieldValues.repeatPassword ? "" : "Пароли должны совпадать"
@@ -88,7 +88,7 @@ const Auth = observer(() => {
                         .then(data => {
                             history.push(LOGIN_ROUTE)
                         })
-                        .catch(reason => alert(reason.response.data.message))
+                        .catch(err => window.alert(err.response.data))
                 }
             }
         } catch (ex) {
@@ -139,7 +139,7 @@ const Auth = observer(() => {
                     </Form.Group>
                     <Form.Group>
                         {!isLogin && <Form.Control
-                            name="email"
+                            name="numberPhone"
                             className="mt-3"
                             placeholder="Введите номер телефона..."
                             value={values.numberPhone}
@@ -183,7 +183,7 @@ const Auth = observer(() => {
                             </div>
                             :
                             <div>
-                                Есть аккаунта? <NavLink className="d-inline p-0"
+                                Есть аккаунт? <NavLink className="d-inline p-0"
                                                         to={LOGIN_ROUTE}>Войдите!</NavLink>
                             </div>
                         }
