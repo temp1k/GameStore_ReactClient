@@ -1,19 +1,19 @@
 import axios from "axios";
 
 
+const apiURL = "http://localhost:5201/";
+// const apiURL = "http://www.gamestoreapi.somee.com/";
+
 const $host = axios.create({
-    // baseURL: 'http://localhost:5201/'
-    baseURL: 'http://www.gamestoreapi.somee.com/'
+    baseURL: apiURL
 })
 
 const $authHost = axios.create({
-    // baseURL: 'http://localhost:5201/'
-    baseURL: 'http://www.gamestoreapi.somee.com/'
+    baseURL: apiURL
 })
 
 const $adminHost = axios.create({
-    // baseURL: 'http://localhost:5201/'
-    baseURL: 'http://www.gamestoreapi.somee.com/'
+    baseURL: apiURL
 })
 
 const authInterceptor = config => {

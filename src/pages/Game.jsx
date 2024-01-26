@@ -146,7 +146,7 @@ const Game = () => {
             <Card>
                 <Row>
                     <Col xs={4}>
-                        <ImageComponent fileName={game.photo}/>
+                        <ImageComponent fileName={game.photo} width={"100%"} height={340}/>
                     </Col>
                     <Col>
                         <Card.Body style={{height: '80%'}}>

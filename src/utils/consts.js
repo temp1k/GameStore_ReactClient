@@ -13,3 +13,5 @@ export const GAME_ROUTE = '/game'
 export const PROFILE_ROUTE = '/profile'
 
 export const OTHER_ROUTE = '/other'
+
+export const CART_ROUTE = '/cart'

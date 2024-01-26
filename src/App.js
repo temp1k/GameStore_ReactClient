@@ -17,10 +17,10 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() =>{
-            try{
+        setTimeout(() => {
+            try {
                 checkToken().then(data => {
-                    if (data.isValid){
+                    if (data.isValid) {
                         user.setUser(true)
                         user.setLogin(data.login)
                         user.setIsAuth(true)
@@ -29,7 +29,7 @@ function App() {
                 })
                     .catch(e => console.log(e))
                     .finally(() => setLoading(false));
-            } catch(e){
+            } catch (e) {
                 console.log(e)
             }
 
@@ -38,7 +38,11 @@ function App() {
     }, []);
 
     if (loading) {
-        return <Spinner animation={"grow"}/>
+        return (
+            <div className={"d-flex h-100 justify-content-center align-items-center"}>
+                <Spinner animation={"grow"}/>
+            </div>
+        )
     }
 
     return (

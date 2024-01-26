@@ -1,6 +1,6 @@
 import {
     ADMIN_ROUTE,
-    BASKET_ROUTE, GAME_ROUTE,
+    BASKET_ROUTE, CART_ROUTE, GAME_ROUTE,
     GAMES_ROUTE,
     HOME_ROUTE,
     LOGIN_ROUTE, OTHER_ROUTE, PROFILE_ROUTE,
@@ -16,6 +16,7 @@ import Game from "./pages/Game";
 import Basket from "./pages/Basket";
 import Profile from "./pages/Profile";
 import OtherConfig from "./pages/OtherConfig";
+import EnterCart from "./pages/EnterCart";
 
 
 export const authRoutes = [
@@ -26,6 +27,10 @@ export const authRoutes = [
     {
         path: PROFILE_ROUTE,
         Component: Profile
+    },
+    {
+        path: CART_ROUTE,
+        Component: EnterCart
     }
 ]
 

@@ -18,3 +18,8 @@ export const postCartAPI = async (cartModal) => {
     const {data} = await $authHost.post('api/Cart', cartModal);
     return data;
 }
+
+export const deleteCartAPI = async (cartId) => {
+    const {data} = await $authHost.delete('api/Cart/'+cartId);
+    return data;
+}

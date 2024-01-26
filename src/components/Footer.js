@@ -7,7 +7,7 @@ import {useLocation} from "react-router-dom/cjs/react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className='text-center text-lg-start text-muted mt-auto' style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
+        <footer className='text-center text-lg-start text-muted mt-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)'}}>
             <section className='d-flex p-4 border-bottom'>
                 <Container className={"d-flex"}>
                     <div className='me-5 d-none d-lg-block'>
@@ -42,7 +42,7 @@ const Footer = () => {
                         </Col>
 
                         <Col md="4" lg="2" xl="2" className='mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+                            <h6 className='text-uppercase fw-bold mb-4'>Полезные ссылки</h6>
                             <p>
                                 <a href='#!' className='text-reset'>
                                     Настройки
@@ -61,17 +61,17 @@ const Footer = () => {
                         </Col>
 
                         <Col md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                            <h6 className='text-uppercase fw-bold mb-4'>Контакты</h6>
                             <p>
                                 <FaHome className="me-2" />
                                 Moscow, Moscow 10012, RU
                             </p>
                             <p>
                                 <MdEmail className="me-3" />
-                                info@example.com
+                                gamestore@gmail.com
                             </p>
                             <p>
-                                <FaPhone className="me-3" /> + 01 234 567 88
+                                <FaPhone className="me-3" /> +7 (968) 629 89-65
                             </p>
                         </Col>
                     </Row>
@@ -79,7 +79,7 @@ const Footer = () => {
             </section>
 
             <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                © 2023 Copyright:
+                © 2024 Copyright:
                 <a className='text-reset fw-bold' href='#'>
                     GameStore
                 </a>
