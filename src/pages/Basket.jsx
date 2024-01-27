@@ -92,6 +92,9 @@ const Basket = () => {
             {/*    </tbody>*/}
             {/*</Table>*/}
             <div style={{paddingBottom: "12dvh"}}>
+                {!cart.length &&
+                    <h4 style={{marginTop: "10%"}}>Ваша корзина пуста :(</h4>
+                }
                 {cart.map((item, index) =>
                     <Card style={{maxWidth: "50%"}} className={"ml-auto mr-auto mb-2 d-flex"} key={item.id}>
                         <Row>
