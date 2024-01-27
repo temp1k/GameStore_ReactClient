@@ -72,3 +72,8 @@ export const createUser = async (user) => {
 //     localStorage.setItem('token', data.token)
 //     return jwtDecode(data.token)
 // }
+
+export const getProfileDataAPI = async () => {
+    const {data} = await $authHost.get('api/Users/profile')
+    return data;
+}

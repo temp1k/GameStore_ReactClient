@@ -288,7 +288,7 @@ const GameModal = ({show, onHide, title, selectedId, setSelectedId = 0, callback
                         selectedValue={selectedPublisher} setSelectedValue={setSelectedPublisher}
                         placeholder={"Выберите издателя"}
                     />
-                    {selectedId && <div>
+                    {selectedId ? <div>
                         <h4>Ключи: </h4>
                         <hr/>
                         <Button variant={"outline-primary"} size={"sm"} onClick={handleShow}>
@@ -309,7 +309,10 @@ const GameModal = ({show, onHide, title, selectedId, setSelectedId = 0, callback
                                 </Col>
                             </Row>
                         )}
-                    </div>}
+                    </div>
+                    :
+                    ''
+                    }
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={reset}>

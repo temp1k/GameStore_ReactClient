@@ -43,7 +43,6 @@ const Auth = observer(() => {
         }
 
         if (fieldValues === values)
-            console.log('Попадает')
             setErrors({
                 ...temp
             });
@@ -70,13 +69,11 @@ const Auth = observer(() => {
         try {
             e.preventDefault();
             if (validate()) {
-                console.log(values.email)
                 if (isLogin) {
                     login(values.login, values.password)
                         .then(data => {
                             user.setIsAuth(true)
                             user.setLogin(data.username)
-                            console.log(user.login)
                             user.setRole(data.role)
                             history.push(HOME_ROUTE)
                         })
@@ -144,7 +141,7 @@ const Auth = observer(() => {
                             placeholder="Введите номер телефона..."
                             value={values.numberPhone}
                             onChange={handleInputChange}
-                            type={"email"}
+                            type={"phone"}
                             isInvalid={!!errors.numberPhone}
 
                         />}
@@ -179,7 +176,7 @@ const Auth = observer(() => {
                         {isLogin ?
                             <div>
                                 Нет аккаунта? <NavLink className="d-inline p-0"
-                                                       to={REGISTRATION_ROUTE}>Зарегестрируйтесь!</NavLink>
+                                                       to={REGISTRATION_ROUTE}>Зарегистрируйтесь!</NavLink>
                             </div>
                             :
                             <div>
@@ -188,7 +185,7 @@ const Auth = observer(() => {
                             </div>
                         }
                         <Button variant={"outline-success"} type={"submit"}>
-                            {isLogin ? "Войти" : "Зарегестрироваться"}
+                            {isLogin ? "Войти" : "Зарегистрироваться"}
                         </Button>
                     </Row>
                 </Form>
