@@ -77,3 +77,13 @@ export const getProfileDataAPI = async () => {
     const {data} = await $authHost.get('api/Users/profile')
     return data;
 }
+
+export const updateProfileData = async (updateProfile) => {
+    const {data} = await $authHost.put('api/Users/profile/update', updateProfile)
+    return data;
+}
+
+export const updatePassword = async (confirmPassword, newPassword) => {
+    const {data} = await $authHost.put('api/Users/updatePassword', {confirmPassword, newPassword});
+    return data;
+}

@@ -25,8 +25,12 @@ export const validate = (fieldValues, errors, setErrors) => {
     return Object.values(temp).every(x => x === "")
 }
 
-function isEmailValid(email) {
+export function isEmailValid(email) {
     return EMAIL_REGEXP.test(email);
+}
+
+export function isPasswordValid(password) {
+    return PASSWORD_REGEXP.test(password);
 }
 
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
