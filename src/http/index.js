@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const apiURL = "http://localhost:5201/";
-// const apiURL = "http://www.gamestoreapi.somee.com/";
+//const apiURL = "http://localhost:5201/";
+const apiURL = "http://www.gamestoreapi.somee.com/";
 
 const $host = axios.create({
     baseURL: apiURL

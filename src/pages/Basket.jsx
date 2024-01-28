@@ -69,7 +69,7 @@ const Basket = () => {
     }
 
     return (
-        <Container className={"h-100 flex-grow-1 position-relative text-center"}>
+        <Container className={"h-100 flex-grow-1 position-relative text-center"} style={{maxWidth: "50%"}}>
             <h2>Корзина</h2>
             {/*<Table>*/}
             {/*    <thead>*/}
@@ -96,7 +96,7 @@ const Basket = () => {
                     <h4 style={{marginTop: "10%"}}>Ваша корзина пуста :(</h4>
                 }
                 {cart.map((item, index) =>
-                    <Card style={{maxWidth: "50%"}} className={"ml-auto mr-auto mb-2 d-flex"} key={item.id}>
+                    <Card className={"ml-auto mr-auto mb-2 d-flex"} key={item.id}>
                         <Row>
                             <Col xs={1} className={"d-flex align-items-center pl-4"}>
                                 <FormCheck

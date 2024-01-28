@@ -27,7 +27,7 @@ const ImageComponent = ({fileName, ...props}) => {
 
     if (loading) {
         return (
-            <div style={{width: props.width, height: props.height, minHeight: 180}} className={"d-flex justify-content-center align-items-center"}>
+            <div style={{width: props.width, height: props.height}} className={"d-flex justify-content-center align-items-center"}>
                 <Spinner animation={"border"} role={"status"} style={{marginRight: 50}}>
                     <span className={"sr-only"}>Загрузка...</span>
                 </Spinner>
