@@ -4,7 +4,6 @@ import {Navbar, Container, Nav, Button, NavItem, NavbarBrand} from "react-bootst
 import {ADMIN_ROUTE, BASKET_ROUTE, HOME_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE} from "../utils/consts";
 import {useHistory, NavLink} from "react-router-dom";
 import {Context} from "../index";
-import Basket from "../pages/Basket";
 
 const NavBar = observer(() => {
     const history = useHistory();

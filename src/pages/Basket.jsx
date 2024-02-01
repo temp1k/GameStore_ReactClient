@@ -71,26 +71,6 @@ const Basket = () => {
     return (
         <Container className={"h-100 flex-grow-1 position-relative text-center"} style={{maxWidth: "50%"}}>
             <h2>Корзина</h2>
-            {/*<Table>*/}
-            {/*    <thead>*/}
-            {/*    <tr>*/}
-            {/*        <th>#</th>*/}
-            {/*        <th>Игра</th>*/}
-            {/*        <th>Цена</th>*/}
-            {/*        <th>Платформа</th>*/}
-            {/*    </tr>*/}
-            {/*    </thead>*/}
-            {/*    <tbody>*/}
-            {/*    {cart.map((item, index) =>*/}
-            {/*        <tr key={item.id} style={{cursor: "pointer"}} onClick={() => history.push(GAME_ROUTE + '/' + item.game.articul)}>*/}
-            {/*            <td>{index + 1}</td>*/}
-            {/*            <td>{item.game.fullName}</td>*/}
-            {/*            <td>{item.game.price}</td>*/}
-            {/*            <td>{item.platform.fullName}</td>*/}
-            {/*        </tr>*/}
-            {/*    )}*/}
-            {/*    </tbody>*/}
-            {/*</Table>*/}
             <div style={{paddingBottom: "12dvh"}}>
                 {!cart.length &&
                     <h4 style={{marginTop: "10%"}}>Ваша корзина пуста :(</h4>

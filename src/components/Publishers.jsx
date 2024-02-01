@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {deleteDeveloper} from "../http/developersAPI";
 import {Button, Table} from "react-bootstrap";
-import DeveloperModal from "./modals/DeveloperModal";
 import {getAllPublishers} from "../http/publishersAPI";
 import PublisherModal from "./modals/PublisherModal";
 
