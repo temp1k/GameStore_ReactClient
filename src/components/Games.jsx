@@ -75,8 +75,7 @@ const   Games = () => {
                 </thead>
                 <tbody>
                 {games.map((game, index) =>
-                    <tr key={game.id}
-                    >
+                    <tr key={game.id}>
                         <td>{index + 1}</td>
                         <td>{game.fullName}</td>
                         <td>{game.shortName}</td>

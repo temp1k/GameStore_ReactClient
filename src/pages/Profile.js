@@ -36,7 +36,7 @@ const Profile = () => {
 
     return (
         <Container style={{maxWidth: 760}}>
-            <Row className={"justify-content-center"} style={{maxHeight: "60%"}}>
+            <Row className={"justify-content-center"}>
                 <Card className={"mt-2 w-100"} bg={"light"} text={"dark"}>
                     <Card.Header className={"text-center"}>
                         <Card.Title>Ваш профиль</Card.Title>

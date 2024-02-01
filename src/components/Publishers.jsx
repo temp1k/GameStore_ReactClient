@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {deleteDeveloper} from "../http/developersAPI";
 import {Button, Table} from "react-bootstrap";
-import {getAllPublishers} from "../http/publishersAPI";
+import {deletePublisher, getAllPublishers} from "../http/publishersAPI";
 import PublisherModal from "./modals/PublisherModal";
 
 const Publishers = () => {
@@ -27,7 +27,7 @@ const Publishers = () => {
 
     const removePublisher = (id) => {
         if(!window.confirm("Вы уверены, что хотите удалить данного разработчика?")) return;
-        deleteDeveloper(id)
+        deletePublisher(id)
             .then(data => {
                 updatePublishers()
             })
