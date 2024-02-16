@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Container, Table} from "react-bootstrap";
 import {formatDateToNormalWithTime} from "../utils/formatDate";
-import {createBackupFile, exportView, getBackupFiles, restoreDbFromBak} from "../http/backupAPI";
+import {createBackupFile, getBackupFiles, restoreDbFromBak} from "../http/backupAPI";
 import LoadModal from "../components/modals/LoadModal";
 import ExportViewModal from "../components/modals/ExportViewModal";
 

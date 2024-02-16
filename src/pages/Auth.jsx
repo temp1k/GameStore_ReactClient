@@ -1,11 +1,10 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Button, Card, Container, Form, Row} from "react-bootstrap";
 import {useLocation} from "react-router-dom/cjs/react-router-dom";
 import {NavLink, useHistory} from "react-router-dom";
 import {HOME_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE} from "../utils/consts";
 import {Context} from "../index";
-import * as PropTypes from "prop-types";
 import useForm from "../hooks/useForm";
 import {login, registration} from "../http/userAPI";
 
@@ -58,11 +57,9 @@ const Auth = observer(() => {
 
     const {
         values,
-        setValues,
         errors,
         setErrors,
         handleInputChange,
-        resetForm
     } = useForm(initialFieldValues, validate, 0)
 
     const handleSubmit = async (e) => {
@@ -181,7 +178,7 @@ const Auth = observer(() => {
                             :
                             <div>
                                 Есть аккаунт? <NavLink className="d-inline p-0"
-                                                        to={LOGIN_ROUTE}>Войдите!</NavLink>
+                                                       to={LOGIN_ROUTE}>Войдите!</NavLink>
                             </div>
                         }
                         <Button variant={"outline-success"} type={"submit"}>
